@@ -185,7 +185,7 @@ public class RejarClassesForAnalysis {
             if ("-prefix".equals(option)) {
                 prefix = new PrefixMatcher(argument);
             } else if ("-exclude".equals(option)) {
-                exclude = new PrefixMatcher(argument);
+                
             } else if ("-inputFileList".equals(option)) {
                 inputFileList = argument;
             } else if ("-auxFileList".equals(option)) {
@@ -197,7 +197,7 @@ public class RejarClassesForAnalysis {
             } else if ("-outputDir".equals(option)) {
                 outputDir = new File(argument);
             } else if ("-excludePattern".equals(option)) {
-                excludePatterns = new PatternMatcher(argument);
+                
             } else {
                 throw new IllegalArgumentException("Unknown option : " + option);
             }

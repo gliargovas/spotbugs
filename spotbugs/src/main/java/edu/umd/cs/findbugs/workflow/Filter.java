@@ -585,11 +585,7 @@ public class Filter {
             } else if ("-annotation".equals(option)) {
                 annotation = argument;
             } else if ("-excludeBugs".equals(option)) {
-                try {
-                    ExcludingHashesBugReporter.addToExcludedInstanceHashes(excludedInstanceHashes, argument);
-                } catch (DocumentException e) {
-                    throw new IllegalArgumentException("Error processing include file: " + argument, e);
-                }
+                
             } else if ("-include".equals(option)) {
                 try {
                     includeFilter.add(new edu.umd.cs.findbugs.filter.Filter(argument));
@@ -597,11 +593,6 @@ public class Filter {
                     throw new IllegalArgumentException("Error processing include file: " + argument, e);
                 }
             } else if ("-exclude".equals(option)) {
-                try {
-                    excludeFilter.add(new edu.umd.cs.findbugs.filter.Filter(argument));
-                } catch (FilterException e) {
-                    throw new IllegalArgumentException("Error processing include file: " + argument, e);
-                }
             } else if ("-hashes".equals(option)) {
                 hashesFromFile = new HashSet<>();
                 try (BufferedReader in = new BufferedReader(UTF8.fileReader(argument))) {

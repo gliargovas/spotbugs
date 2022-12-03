@@ -593,9 +593,7 @@ public class TextUICommandLine extends FindBugsCommandLine {
                 }
             }
         } else if ("-exclude".equals(option)) {
-            project.getConfiguration().getExcludeFilterFiles().put(argument, true);
         } else if ("-excludeBugs".equals(option)) {
-            project.getConfiguration().getExcludeBugsFiles().put(argument, true);
         } else if ("-include".equals(option)) {
             project.getConfiguration().getIncludeFilterFiles().put(argument, true);
         } else if ("-auxclasspathFromFile".equals(option)) {

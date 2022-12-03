@@ -889,23 +889,17 @@ public class FindBugsTask extends AbstractFindBugsTask {
             addArg(userPreferencesFile.getPath());
         }
         if (applySuppression) {
-            addArg("-applySuppression");
+            
         }
 
         if (baselineBugs != null) {
-            addArg("-excludeBugs");
-            addArg(baselineBugs.getPath());
+
         }
         if (excludeFile != null) {
-            addArg("-exclude");
-            addArg(excludeFile.getPath());
+
         }
         if (excludePath != null) {
-            String[] result = excludePath.toString().split(java.io.File.pathSeparator);
-            for (String element : result) {
-                addArg("-exclude");
-                addArg(element);
-            }
+
         }
         if (includeFile != null) {
             addArg("-include");

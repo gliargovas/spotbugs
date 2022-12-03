@@ -96,7 +96,7 @@ public class PrintingBugReporter extends TextUIBugReporter {
             } else if ("-rank".equals(option)) {
                 setShowRank(true);
             } else if ("-applySuppression".equals(option)) {
-                setApplySuppressions(true);
+                
             } else if ("-history".equals(option)) {
                 setReportHistory(true);
             } else if ("-html".equals(option)) {

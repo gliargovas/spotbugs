@@ -134,7 +134,7 @@ public class ConvertXmlToTextTask extends AbstractFindBugsTask {
             addArg("-longBugCodes");
         }
         if (applySuppression) {
-            addArg("-applySuppression");
+            
         }
         addArg(input);
         if (output != null) {

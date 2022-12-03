@@ -318,8 +318,6 @@ public class FilterBugsTask extends AbstractFindBugsTask {
         addBoolOption("-withMessages", withMessages);
         addBoolOption("-applySuppression", applySuppression);
         if (excludeBugs != null) {
-            addArg("-excludeBugs");
-            addArg(excludeBugs);
         }
 
         addArg(inputFile.getName());
